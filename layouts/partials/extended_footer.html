@@ -1,2 +1,5 @@
-{{ $js := resources.Get "js/logo-bars.js" | fingerprint }}
-<script src="{{ $js.RelPermalink }}"></script>
+{{ $logoBars := resources.Get "js/logo-bars.js" | fingerprint }}
+<script src="{{ $logoBars.RelPermalink }}"></script>
+
+{{ $filterViz := resources.Get "js/filter-viz.js" | fingerprint }}
+<script src="{{ $filterViz.RelPermalink }}"></script>

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   container.className = 'logo-bars';
 
   // Each bar is 2px wide + 8px gap = 10px per unit, matching the original gradient
-  var numBars = 100;
+  var numBars = 76;
   var staggerSeconds = 0.07;
 
   for (var i = 0; i < numBars; i++) {
