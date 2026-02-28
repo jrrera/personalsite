@@ -18,4 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   logo.appendChild(container);
   logo.classList.add('logo-bars-ready');
+
+  // Occasionally stutter the bars — random interval between 6 and 14 seconds
+  function scheduleStutter() {
+    var delay = 6000 + Math.random() * 8000;
+    setTimeout(function () {
+      container.classList.add('stuttering');
+      container.addEventListener('animationend', function onEnd() {
+        container.classList.remove('stuttering');
+        container.removeEventListener('animationend', onEnd);
+        scheduleStutter();
+      });
+    }, delay);
+  }
+
+  scheduleStutter();
 });
