@@ -1,0 +1,30 @@
+<style>
+  /* Hide the CSS pseudo-element once JS has injected real bar elements */
+  .header__logo.logo-bars-ready::after {
+    display: none;
+  }
+
+  .logo-bars {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .logo-bar {
+    width: 2px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    background-color: var(--accent);
+    animation: logo-bar-wave 2s ease-in-out infinite;
+  }
+
+  @keyframes logo-bar-wave {
+    0%, 100% {
+      background-color: var(--accent);
+    }
+    50% {
+      background-color: color-mix(in srgb, var(--accent) 30%, black);
+    }
+  }
+</style>

@@ -1,0 +1,2 @@
+{{ $js := resources.Get "js/logo-bars.js" | fingerprint }}
+<script src="{{ $js.RelPermalink }}"></script>
